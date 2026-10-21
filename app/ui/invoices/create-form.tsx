@@ -13,7 +13,7 @@ import { createInvoice, State } from "@/app/lib/actions";
 import { useActionState } from "react";
 
 export default function Form({ customers }: { customers: CustomerField[] }) {
-  const [state, formAction] = useActionState<State>(createInvoice, {
+  const [state, formAction] = useActionState<State, FormData>(createInvoice, {
     message: null,
     errors: {},
   });
